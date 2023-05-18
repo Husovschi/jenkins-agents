@@ -4,6 +4,6 @@ FROM jenkins/agent:jdk11 as jenkins
 USER root
 
 COPY --from=helm /usr/bin/helm /usr/bin/helm
-RUN apt-get update && apt-get install -y python3.9
+RUN apt-get update && apt-get install -y python3.9 python3-pip
 
 USER jenkins
